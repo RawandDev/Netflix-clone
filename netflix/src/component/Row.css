@@ -26,3 +26,7 @@
 .row_posterLarge {
     max-height: 250px;
 }
+
+.row > h1 {
+    position: relative;
+}

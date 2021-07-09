@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import instance from "../helper/axios";
+import axios from "../helper/axios";
 import "./Row.css"
 
 function Row({ title, fetchUrl, isLarge }) {
@@ -8,14 +8,14 @@ function Row({ title, fetchUrl, isLarge }) {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await instance.get(fetchUrl);
+      const response = await axios.get(fetchUrl);
       setMovie(response.data.results);
     }
 
     fetchData();
   }, [fetchUrl]);
 
-  console.log(movie);
+  // console.log(movie);
 
   return (
     <div className="row">
